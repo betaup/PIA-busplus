@@ -16,7 +16,12 @@ public class Puesto {
     @Column(name = "ID_puesto")
     private Integer id;
 
-    private String nombre_puesto;
+    @Column(name = "nombre_puesto")
+    private String nombrePuesto;
+
     private String descripcion;
-    private BigDecimal sueldo_base;
+
+    @Column(name = "sueldo_base")
+    private BigDecimal sueldoBase;
 }
+

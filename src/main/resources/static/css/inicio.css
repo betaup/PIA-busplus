@@ -1,0 +1,196 @@
+body {
+    font-family: "Wix Madefor Display", sans-serif !important;
+    font-style: normal;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+.dashboard-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #212529;
+    padding-top: 1rem;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #343a40;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.sidebar .nav-link {
+    color: #adb5bd;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #343a40;
+    color: #ffffff;
+    border-left: 3px solid #0d6efd;
+}
+
+.sidebar .nav-item + .nav-item {
+    margin-top: 0.2rem;
+}
+
+.sidebar .nav-section-title {
+    color: #ced4da;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin: 1rem 1rem 0.25rem;
+    letter-spacing: 0.05em;
+}
+
+.bi {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Administración como parte del nav */
+.sidebar .admin-group {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.sidebar .admin-toggle {
+    background: none;
+    border: none;
+    color: #adb5bd;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .admin-toggle:hover {
+    color: #ffffff;
+}
+
+.sidebar .collapse .nav-link {
+    padding-left: 2rem;
+    font-size: 0.88rem;
+    color: #ced4da;
+}
+
+.sidebar .collapse .nav-link:hover {
+    color: #ffffff;
+    background-color: #343a40;
+}
+
+/* WebKit Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+/*
+ver perfil
+ */
+.user-card {
+    max-width: 300px; /* antes 360px */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    padding: 0.9rem 1rem; /* antes 1.25rem */
+    border: 1px solid #e0e0e0;
+    font-family: "Wix Madefor Display", sans-serif;
+    font-size: 0.9rem; /* más pequeño */
+    transition: box-shadow 0.3s ease;
+}
+
+.user-card .rounded-circle {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.user-card .rounded-circle span {
+    font-size: 1rem;
+}
+
+
+.user-card:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.user-card .bi {
+    font-size: 1.3rem;
+}
+
+.user-name-text {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.user-name-line {
+    height: 2px;
+    background-color: #e2e8f0;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    content: "";
+    display: block;
+}
+
+/*
+boton de cerrar sesion
+ */
+.logout-btn-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #dc3545; /* rojo por defecto */
+    border: 2px solid #dc3545;
+    color: #ffffff;              /* ícono blanco */
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem; /* más relleno a la derecha */
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logout-btn-fab:hover {
+    background-color: #ffffff;  /* blanco al pasar el mouse */
+    color: #dc3545;             /* ícono rojo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Elimina cualquier margen lateral del ícono */
+.logout-btn-fab i {
+    margin: 0;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>BusPlus | Iniciar sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Estilos y fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="/css/login.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2 class="login-title">BusPlus <span class="text-secondary">| Iniciar sesión</span></h2>
+
+    <form th:action="@{/login}" method="post">
+      <div class="input-group">
+        <input type="text" name="username" placeholder="Usuario" required />
+      </div>
+
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Contraseña" required />
+      </div>
+
+      <div class="input-group">
+        <button type="submit">Ingresar</button>
+      </div>
+
+      <div th:if="${param.error}" class="login-alert error">Usuario o contraseña incorrectos.</div>
+      <div th:if="${param.logout}" class="login-alert success">Sesión cerrada correctamente.</div>
+    </form>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+
